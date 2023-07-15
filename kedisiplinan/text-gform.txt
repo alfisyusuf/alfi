@@ -1,0 +1,7 @@
+https://docs.google.com/forms/d/e/1FAIpQLScgi9vrD1yL-khDZmCZtZk21oKPjggC6fkwdhM7I32xWsLlEg/formResponse
+
+
+
+entry.1560608303=999-kelas
+entry.1627372173=999-nama
+entry.1574520229=999-jenis-pelanggaran

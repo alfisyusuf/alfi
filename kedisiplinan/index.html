@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pelanggaran Siswa</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var submitted=false
+    </script>
+    <iframe 
+        name="hiddenConfirm" 
+        id="hiddenConfirm" 
+        style="display: none;" 
+        onload="if(submitted){window.location='submitted.html';}"
+        >
+    </iframe>
+    <h2>Form Pelanggaran Siswa</h2>
+
+    <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLScgi9vrD1yL-khDZmCZtZk21oKPjggC6fkwdhM7I32xWsLlEg/formResponse" method="POST"
+        target="hiddenConfirm"
+        onsubmit="submitted=true"
+        >
+        <label for="kelas">Kelas:</label>
+        <select id="kelas" name="entry.1560608303" onchange="populateSiswa()">
+        <option value="">Pilih Kelas</option>
+        <option value="kelas1">Kelas 1</option>
+        <option value="kelas2">Kelas 2</option>
+        <option value="kelas3">Kelas 3</option>
+        </select><br><br>
+
+        <label for="nama">Nama Siswa:</label>
+        <select id="nama" name="entry.1627372173"></select><br><br>
+
+        <label for="pelanggaran">Jenis Pelanggaran:</label>
+        <select id="pelanggaran" name="entry.1574520229">
+        <option value="terlambat">Terlambat</option>
+        <option value="membolos">Membolos</option>
+        <option value="tidakmengerjakan">Tidak Mengerjakan Tugas</option>
+        </select><br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+
+    <script>
+        function populateSiswa() {
+        var kelasDropdown = document.getElementById("kelas");
+        var siswaDropdown = document.getElementById("nama");
+        var selectedKelas = kelasDropdown.value;
+
+        // Menghapus semua opsi siswa sebelumnya
+        while (siswaDropdown.options.length > 0) {
+            siswaDropdown.remove(0);
+        }
+
+        // Menambahkan opsi siswa berdasarkan kelas yang dipilih
+        if (selectedKelas === "kelas1") {
+            addOption(siswaDropdown, "siswa1", "Siswa 1");
+            addOption(siswaDropdown, "siswa2", "Siswa 2");
+            addOption(siswaDropdown, "siswa3", "Siswa 3");
+        } else if (selectedKelas === "kelas2") {
+            addOption(siswaDropdown, "siswa4", "Siswa 4");
+            addOption(siswaDropdown, "siswa5", "Siswa 5");
+            addOption(siswaDropdown, "siswa6", "Siswa 6");
+        } else if (selectedKelas === "kelas3") {
+            addOption(siswaDropdown, "siswa7", "Siswa 7");
+            addOption(siswaDropdown, "siswa8", "Siswa 8");
+            addOption(siswaDropdown, "siswa9", "Siswa 9");
+        }
+        }
+
+        function addOption(selectElement, value, text) {
+        var option = document.createElement("option");
+        option.value = value;
+        option.text = text;
+        selectElement.add(option);
+        }
+    </script>
+
+</body>
+</html>
