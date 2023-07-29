@@ -78,6 +78,8 @@
                         <p>Electric potential energy is the energy possessed by electric charges due to their relative positions in an electric field. Electric potential energy can be calculated by multiplying the electric potential at a point by the electric charge at that point.</p>
                     </section>
                 </section>
+
+                <!-- Electric Charges -->
                 <section>
                     <section data-background="#70a1ff">
                         <h1>ELectric Charges</h1>
@@ -90,6 +92,19 @@
                             <p class="fragment" style="margin: 0 20px 0 20px;">and</p>
                             <p class="fragment">negative</p>
                         </div>
+                    </section>
+                    <section>
+                        <p>Elektron berpindah ke tempat yang lebih kekurangan. Proses tersebut berlangsung hingga mencapai keseimbangan.</p>
+                    </section>
+                </section>
+                <!-- Electric Forces -->
+                <section>
+                    <section>
+                        <h1>Electric Forces</h1>
+                    </section>
+                    <section>
+                        <h3>Formula</h3>
+                        \[F = k  \frac{q_{1}  q_{2}}{r^{2}}\]
                     </section>
                 </section>
                 <section>
@@ -338,6 +353,7 @@
 		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
 		<script>
 
 			// Also available as an ES module, see:
@@ -348,8 +364,17 @@
 				center: true,
 				hash: true,
 
+                mathjax2: {
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.MathJax2 ]
 			});
 
 		</script>
