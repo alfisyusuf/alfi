@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Fisika</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Soal Fisika</h1>
+
+    <!-- Soal 1 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 1</h5>
+            <p class="card-text">Sebuah kawat lurus panjang yang dialiri arus listrik sebesar 10 A dari arah timur ke barat. Besar dan arah induksi magnetik di titik P yang berada tepat di bawah kawat tersebut pada jarak 10 cm adalah ....</p>
+            <button class="btn btn-primary" onclick="showAnswer(1)">Tampilkan Jawaban</button>
+            <p id="answer1" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 2</h5>
+            <p class="card-text">Two parallel wires spaced 2 cm apart carry currents of 2 A and 3 A in opposite directions. The first wire has an upward direction. Where is the location of a point along the first wire where the magnetic induction is equal to zero?</p>
+            <button class="btn btn-primary" onclick="showAnswer(2)">Tampilkan Jawaban</button>
+            <p id="answer2" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 3 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 3</h5>
+            <p class="card-text">A long wire carrying current I results in a magnetic induction B at a distance of a from the wire. The magnitude of the magnetic induction at a point located 3a units away from the wire is...</p>
+            <button class="btn btn-primary" onclick="showAnswer(3)">Tampilkan Jawaban</button>
+            <p id="answer3" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 4 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 4</h5>
+            <p class="card-text">Two long wires, a and b, are placed in parallel at a distance of 8 cm from each other and carry currents in the same direction. Each wire carries a current of 20 A. Determine the magnitude and direction of the magnetic induction at point P, which is located 2 cm away from wire a.</p>
+            <button class="btn btn-primary" onclick="showAnswer(4)">Tampilkan Jawaban</button>
+            <p id="answer4" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 5 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 5</h5>
+            <p class="card-text">A circular wire loop with a radius of 2π cm has 10 turns and carries a current of 2 A. What is the magnitude of the magnetic induction at the center of the circle?</p>
+            <button class="btn btn-primary" onclick="showAnswer(5)">Tampilkan Jawaban</button>
+            <p id="answer5" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showAnswer(questionNumber) {
+        const answers = {
+            1: "Jawaban untuk Soal 1...",
+            2: "Jawaban untuk Soal 2...",
+            3: "Jawaban untuk Soal 3...",
+            4: "Jawaban untuk Soal 4...",
+            5: "Jawaban untuk Soal 5...",
+        };
+
+        const answerElement = document.getElementById(`answer${questionNumber}`);
+        if (answerElement) {
+            answerElement.textContent = `Jawaban: ${answers[questionNumber]}`;
+            answerElement.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
