@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Fisika</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Soal Fisika</h1>
+
+    <!-- Soal 1 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 1</h5>
+            <p class="card-text">Sebuah kawat lurus dialiri arus listrik dari barat ke timur memotong medan magnetik yang berarah ke selatan. Arah gaya Lorentznya adalah ....</p>
+            <button class="btn btn-primary" onclick="showAnswer(1)">Tampilkan Jawaban</button>
+            <p id="answer1" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="card mt-3">
+        <div class card-body="">
+            <h5 class="card-title">Soal 2</h5>
+            <p class="card-text">Sebuah kawat lurus panjangnya 20 cm dialiri arus listrik 4 A, memotong medan magnet yang besarnya 100 T secara tegak lurus. Gaya magnetik yang dihasilkan adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(2)">Tampilkan Jawaban</button>
+            <p id="answer2" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 3 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 3</h5>
+            <p class="card-text">Sebuah kawat lurus panjangnya 20 cm dialiri arus listrik 2 A, memotong medan magnet yang besarnya 200 T dan membentuk sudut 30° terhadap garis medan magnet. Gaya magnetik yang dihasilkan adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(3)">Tampilkan Jawaban</button>
+            <p id="answer3" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 4 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 4</h5>
+            <p class="card-text">Dua buah kawat sejajar berjarak 4 cm dialiri arus listrik berlawanan arah masing-masing 2 A dan 4 A. Gaya magnetik persatuan panjang kawat yang terjadi adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(4)">Tampilkan Jawaban</button>
+            <p id="answer4" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 5 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 5</h5>
+            <p class="card-text">Sebuah partikel bermuatan listrik positif, bergerak dengan kecepatan tertentu ke arah Selatan, didalam medan magnet homogen ke arah Timur. Arah gaya magnet pada muatan adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(5)">Tampilkan Jawaban</button>
+            <p id="answer5" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 6 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 6</h5>
+            <p class="card-text">Sebuah muatan listrik negatif, bergerak dengan kecepatan tertentu ke arah Barat, di dalam medan magnet homogen ke arah Selatan. Arah gaya magnet pada muatan tersebut adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(6)">Tampilkan Jawaban</button>
+            <p id="answer6" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 7 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 7</h5>
+            <p class="card-text">Sebuah partikel bermuatan 2 C bergerak dengan kecepatan 2.104 m/s memotong medan magnetik yang besarnya 105 T secara tegak lurus. Besar gaya magnetik yang dialami muatan tersebut adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(7)">Tampilkan Jawaban</button>
+            <p id="answer7" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showAnswer(questionNumber) {
+        const answers = {
+            1: "Jawaban untuk Soal 1...",
+            2: "Jawaban untuk Soal 2...",
+            3: "Jawaban untuk Soal 3...",
+            4: "Jawaban untuk Soal 4...",
+            5: "Jawaban untuk Soal 5...",
+            6: "Jawaban untuk Soal 6...",
+            7: "Jawaban untuk Soal 7...",
+        };
+
+        const answerElement = document.getElementById(`answer${questionNumber}`);
+        if (answerElement) {
+            answerElement.innerHTML = `Jawaban: ${answers[questionNumber]}`;
+            answerElement.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
