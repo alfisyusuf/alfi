@@ -80,6 +80,26 @@
             <p id="answer7" style="display:none;">Jawaban: ...</p>
         </div>
     </div>
+
+    <!-- Soal 8 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 8</h5>
+            <p class="card-text">Sebuah bidang berbentuk lingkaran dengan luas penampang 20 cm<suo>2</suo> ditembus oleh medan magnetik yang besarnya 400 T secara tegak lurus. Fluks magnetik yang ditimbulkannya adalah ....</p>
+            <button class="btn btn-primary" onclick="showAnswer(8)">Tampilkan Jawaban</button>
+            <p id="answer8" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
+
+    <!-- Soal 9 -->
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Soal 9</h5>
+            <p class="card-text">Sebuah bidang berbentuk persegi dengan luas 40 cm<sup>2</sup> ditembus oleh medan magnetik 200 T yang membentuk sudut 30&deg; terhadap bidang. Besar fluks magnetik yang dihasilkan adalah....</p>
+            <button class="btn btn-primary" onclick="showAnswer(9)">Tampilkan Jawaban</button>
+            <p id="answer9" style="display:none;">Jawaban: ...</p>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -92,9 +112,11 @@
             2: "80 N",
             3: "40 N",
             4: "...",
-            5: "Jawaban untuk Soal 5...",
-            6: "Jawaban untuk Soal 6...",
-            7: "Jawaban untuk Soal 7...",
+            5: "atas",
+            6: "bawah",
+            7: "4.10<sup>9</sup>",
+            8: "0,8 Wb",
+            9: "0,4 Wb"
         };
 
         const answerElement = document.getElementById(`answer${questionNumber}`);
