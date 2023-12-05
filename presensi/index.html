@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Form Bootstrap</title>
+</head>
+<body>
+
+<div class="container mt-5">
+  <form
+        method="POST" 
+        action="https://script.google.com/macros/s/AKfycbznRmh9WRgJIY6tQSFfZEWqHzeyqLJT6mFWV_RJMB1p73bp14Kp9OyX1fCj8FGz4Tzc9w/exec"
+  >
+    <div class="form-group">
+      <label for="nama">Nama:</label>
+      <select class="form-control" id="nama" name="Nama">
+        <option value="Nama 1">Nama 1</option>
+        <option value="Nama 2">Nama 2</option>
+        <option value="Nama 3">Nama 3</option>
+        <!-- Tambahkan opsi sesuai kebutuhan -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="keterangan">Keterangan:</label>
+      <select class="form-control" id="keterangan" name="Keterangan">
+        <option value="hadir">Hadir</option>
+        <option value="alasan_lain">Alasan Lain</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="alasanLainInput" style="display: none;">
+      <label for="alasanLain">Alasan Lain:</label>
+      <input name="Keterangan" type="text" class="form-control" id="alasanLain" placeholder="Masukkan alasan lain">
+    </div>
+
+    <div class="form-group">
+      <label for="tanggal">Tanggal:</label>
+      <select class="form-control" id="tanggal" name="Tanggal">
+        <option value="5_desember">5 Desember</option>
+        <option value="6_desember">6 Desember</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Menampilkan atau menyembunyikan input alasan lain berdasarkan pilihan keterangan
+  $(document).ready(function(){
+    $("#keterangan").change(function(){
+      if ($(this).val() === "alasan_lain") {
+        $("#alasanLainInput").show();
+      } else {
+        $("#alasanLainInput").hide();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
