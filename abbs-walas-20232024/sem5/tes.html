@@ -1,1 +1,72 @@
-<h2>Tes</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Nilai Siswa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Data Nilai Siswa Kelas 12 MIPA 3</h1>
+
+        <!-- Daftar Nama Siswa -->
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-dark">Daftar Nama Siswa</li>
+            <!-- Tambahkan nama siswa ke dalam list -->
+            <li class="list-group-item" onclick="showData('Abid Irfan Maulana')">Abid Irfan Maulana</li>
+            <li class="list-group-item" onclick="showData('Ammar Makarim Wardhana')">Ammar Makarim Wardhana</li>
+            <!-- Tambahkan nama siswa lainnya di sini -->
+            <!-- ... -->
+        </ul>
+
+        <!-- Tampilan Detail Nilai Siswa -->
+        <div class="mt-4" id="detailData">
+            <!-- Detail nilai siswa akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS dan Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Data nilai siswa
+        var dataSiswa = {
+            "Abid Irfan Maulana": {
+                "PAI": 90,
+                "PPKn": 85,
+                // Tambahkan nilai lainnya di sini
+            },
+            "Ammar Makarim Wardhana": {
+                "PAI": 88,
+                "PPKn": 92,
+                // Tambahkan nilai lainnya di sini
+            },
+            // Tambahkan data nilai untuk siswa lainnya di sini
+            // ...
+        };
+
+        // Fungsi untuk menampilkan data siswa berdasarkan nama
+        function showData(namaSiswa) {
+            var detailDataElement = document.getElementById("detailData");
+            var nilaiSiswa = dataSiswa[namaSiswa];
+
+            // Buat tampilan detail nilai siswa
+            var detailHTML = "<h2>Detail Nilai - " + namaSiswa + "</h2><ul class='list-group'>";
+            for (var mataPelajaran in nilaiSiswa) {
+                detailHTML += "<li class='list-group-item'>" + mataPelajaran + ": " + nilaiSiswa[mataPelajaran] + "</li>";
+            }
+            detailHTML += "</ul>";
+
+            // Tampilkan detail nilai siswa di elemen dengan id "detailData"
+            detailDataElement.innerHTML = detailHTML;
+        }
+    </script>
+
+</body>
+
+</html>
